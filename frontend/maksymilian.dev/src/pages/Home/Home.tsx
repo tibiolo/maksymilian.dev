@@ -1,6 +1,7 @@
 import Navbar from '../../components/Navbar/Navbar';
 import { FaArrowRightLong } from 'react-icons/fa6';
 import { PiHandWaving } from 'react-icons/pi';
+import { MdMailOutline } from "react-icons/md";
 
 const Home = () => {
   return (
@@ -8,7 +9,7 @@ const Home = () => {
       <Navbar />
       <main>
         <section className="home mt-16 mb-16 md:mt-32 md:mb-32 flex justify-center items-center">
-          <div className="home-container grid grid-cols-[max-content_max-content] md:grid-cols-[max-content_max-content_max-content] items-center justify-center">
+          <div className="home-container grid  md:grid-cols-[max-content_max-content_max-content] items-center justify-center">
             <div className="home-socials flex flex-col items-center justify-center px-7 gap-3 md:order-1">
               <a href="">
                 <svg
@@ -31,14 +32,14 @@ const Home = () => {
                 </svg>
               </a>
             </div>
-            <div className="home-img w-40 md:w-60 flex items-center justify-center md:order-3">
+            <div className="home-img w-40 md:w-50 flex items-center justify-center md:order-3">
               <img
                 className="rounded-full border-5 border-gray-300"
-                src="/public/profile-img.jpg"
+                src="/profile-img.jpg"
                 alt="Profile image"
               />
             </div>
-            <div className="home-data col-span-2 p-10 md:col-span-1 md:order-2 w-full max-w-md ">
+            <div className="home-data col-span-2 md:col-span-1 md:order-2 px-8 py-10 flex flex-col gap-2">
               <h1 className="home-name text-4xl md:text-5xl font-bold text-gray-800 flex  gap-2 ">
                 Maksymilian
                 <PiHandWaving />
@@ -51,6 +52,13 @@ const Home = () => {
                 Full-Stack Developer driven by problem-solving and purposeful
                 design.
               </p>
+
+              <a
+                href="#contact"
+                className="home-btn  px-6 py-4 text-white font-bold bg-green-500 rounded-2xl w-fit mt-5 flex gap-2 items-center hover:bg-green-600 transition delay-50 duration-250 ease-in-out hover:translate-3d hover:scale-105 "
+              >
+                <MdMailOutline className='w-6 h-6 font-bold' /> Message
+              </a>
             </div>
           </div>
         </section>
