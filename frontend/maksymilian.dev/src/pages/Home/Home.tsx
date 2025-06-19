@@ -3,6 +3,7 @@ import { FaArrowRightLong } from 'react-icons/fa6';
 import { PiHandWaving } from 'react-icons/pi';
 import { MdMailOutline } from 'react-icons/md';
 import SectionInfoCard from '../../components/SectionInfoCard/SectionInfoCard';
+import SkillsCard from '../../components/SkillsCard/SkillsCard';
 
 const Home = () => {
   return (
@@ -65,8 +66,8 @@ const Home = () => {
         </section>
         <section className="about flex flex-col items-center justify-center">
           <SectionInfoCard name="About Me" info="Who am I ?" />
-          <div className="about-me-container md:w-[60%]">
-            <p className="about-me-info px-6 md:px-10 py-8 text-lg md:text-xl text-gray-700 leading-relaxed text-justify md:text-left ">
+          <div className="about-me-container max-w-[90%] md:w-[60%] border bg-white rounded-xl border-gray-300 drop-shadow-md ">
+            <p className="about-me-info px-6 md:px-10 py-8 text-lg md:text-xl text-gray-700 leading-relaxed text-center italic ">
               I'm a Full-Stack Developer with a passion for building efficient,
               scalable, and user-friendly applications. My key interests lie in
               Full-Stack Software Development and Cybersecurity, and I'm always
@@ -77,6 +78,10 @@ const Home = () => {
         </section>
         <section className="skills">
           <SectionInfoCard name="Skills" info="My Skills" />
+          <SkillsCard />
+        </section>
+        <section className="projects">
+          <SectionInfoCard name="Projects" info="Recent projects" />
         </section>
       </main>
     </div>
