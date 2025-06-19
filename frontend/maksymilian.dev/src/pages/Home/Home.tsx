@@ -1,15 +1,16 @@
 import Navbar from '../../components/Navbar/Navbar';
 import { FaArrowRightLong } from 'react-icons/fa6';
 import { PiHandWaving } from 'react-icons/pi';
-import { MdMailOutline } from "react-icons/md";
+import { MdMailOutline } from 'react-icons/md';
+import SectionInfoCard from '../../components/SectionInfoCard/SectionInfoCard';
 
 const Home = () => {
   return (
     <div className="">
       <Navbar />
-      <main>
-        <section className="home mt-16 mb-16 md:mt-32 md:mb-32 flex justify-center items-center">
-          <div className="home-container grid  md:grid-cols-[max-content_max-content_max-content] items-center justify-center">
+      <main className="mt-16 mb-16 md:mt-32 md:mb-32 flex flex-col gap-10">
+        <section className="home  flex justify-center items-center">
+          <div className="home-container grid  md:grid-cols-[max-content_1fr_max-content] items-center justify-center">
             <div className="home-socials flex flex-col items-center justify-center px-7 gap-3 md:order-1">
               <a href="">
                 <svg
@@ -40,7 +41,7 @@ const Home = () => {
               />
             </div>
             <div className="home-data col-span-2 md:col-span-1 md:order-2 px-8 py-10 flex flex-col gap-2">
-              <h1 className="home-name text-4xl md:text-5xl font-bold text-gray-800 flex  gap-2 ">
+              <h1 className="home-name text-4xl md:text-5xl font-bold text-gray-800 flex gap-2">
                 Maksymilian
                 <PiHandWaving />
               </h1>
@@ -55,12 +56,27 @@ const Home = () => {
 
               <a
                 href="#contact"
-                className="home-btn  px-6 py-4 text-white font-bold bg-green-500 rounded-2xl w-fit mt-5 flex gap-2 items-center hover:bg-green-600 transition delay-50 duration-250 ease-in-out hover:translate-3d hover:scale-105 "
+                className="home-btn  px-5 py-3 text-white font-bold bg-green-500 rounded-2xl w-fit mt-5 flex gap-2 items-center hover:bg-green-600 transition delay-50 duration-250 ease-in-out hover:translate-3d hover:scale-105 "
               >
-                <MdMailOutline className='w-6 h-6 font-bold' /> Message
+                <MdMailOutline className="w-6 h-6 font-bold" /> Message
               </a>
             </div>
           </div>
+        </section>
+        <section className="about flex flex-col items-center justify-center">
+          <SectionInfoCard name="About Me" info="Who am I ?" />
+          <div className="about-me-container md:w-[60%]">
+            <p className="about-me-info px-6 md:px-10 py-8 text-lg md:text-xl text-gray-700 leading-relaxed text-justify md:text-left ">
+              I'm a Full-Stack Developer with a passion for building efficient,
+              scalable, and user-friendly applications. My key interests lie in
+              Full-Stack Software Development and Cybersecurity, and I'm always
+              looking for opportunities to grow, collaborate, and make an impact
+              through technology.
+            </p>
+          </div>
+        </section>
+        <section className="skills">
+          <SectionInfoCard name="Skills" info="My Skills" />
         </section>
       </main>
     </div>
