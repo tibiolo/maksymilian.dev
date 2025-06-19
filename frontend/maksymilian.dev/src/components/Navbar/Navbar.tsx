@@ -29,7 +29,7 @@ const Navbar = () => {
   const [active, setActive] = useState<string>('home');
 
   return (
-    <div className="h-16 flex justify-center fixed bottom-0 md:top-0 md:bottom-auto left-0 z-50 w-full px-2 py-2 border-t md:border-b border-gray-300 ">
+    <div className="bg-white h-16 flex justify-center fixed bottom-0 md:top-0 md:bottom-auto left-0 z-50 w-full px-2 py-2 border-t md:border-b border-gray-300 ">
       <div className="flex w-full justify-evenly items-center">
         <h2 className="hidden md:inline text-xl font-bold text-gray-800">
           Maksymilian.dev
