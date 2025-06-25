@@ -4,6 +4,7 @@ import { PiHandWaving } from 'react-icons/pi';
 import { MdMailOutline } from 'react-icons/md';
 import SectionInfoCard from '../../components/SectionInfoCard/SectionInfoCard';
 import SkillsCard from '../../components/SkillsCard/SkillsCard';
+import ProjectCard from '../../components/ProjectCard/ProjectCard';
 
 const Home = () => {
   return (
@@ -66,7 +67,7 @@ const Home = () => {
         </section>
         <section className="about flex flex-col items-center justify-center">
           <SectionInfoCard name="About Me" info="Who am I ?" />
-          <div className="about-me-container max-w-[90%] md:w-[60%] border bg-white rounded-xl border-gray-300 drop-shadow-md ">
+          <div className="about-me-container max-w-[90%] md:w-[60%] lg:w-[40%] border bg-white rounded-2xl border-gray-300 drop-shadow-md ">
             <p className="about-me-info px-6 md:px-10 py-8 text-lg md:text-xl text-gray-700 leading-relaxed text-center italic ">
               I'm a Full-Stack Developer with a passion for building efficient,
               scalable, and user-friendly applications. My key interests lie in
@@ -82,6 +83,10 @@ const Home = () => {
         </section>
         <section className="projects">
           <SectionInfoCard name="Projects" info="Recent projects" />
+          <div className="projects-container grid-cols-1 flex justify-center">
+            <ProjectCard imgPath="/project1_screen.PNG" name="Forno Felice" />
+
+          </div>
         </section>
       </main>
     </div>
