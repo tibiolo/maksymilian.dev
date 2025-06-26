@@ -7,7 +7,7 @@ const ProjectCard = ({ imgPath, name }: ProjectCardProps) => {
   return (
     <div className="border border-gray-300 rounded-2xl bg-white drop-shadow-md p-5">
       <img
-        className="w-60 rounded-xl py-2"
+        className="w-60 rounded-2xl py-2"
         src={`${imgPath}`}
         alt="Project Image"
       />
