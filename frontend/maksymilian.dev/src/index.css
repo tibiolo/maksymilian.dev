@@ -4,6 +4,8 @@
 
 @theme {
   --breakpoint-md: 50rem;
+  --breakpoint-3xl: 100rem;
+  --breakpoint-4xl: 110rem;
 }
 
 @layer base {
