@@ -2,6 +2,7 @@ import Navbar from '../../components/Navbar/Navbar';
 import { FaArrowRightLong } from 'react-icons/fa6';
 import { PiHandWaving } from 'react-icons/pi';
 import { MdMailOutline } from 'react-icons/md';
+import { FaLongArrowAltRight } from 'react-icons/fa';
 import SectionInfoCard from '../../components/SectionInfoCard/SectionInfoCard';
 import SkillsCard from '../../components/SkillsCard/SkillsCard';
 import ProjectCard from '../../components/ProjectCard/ProjectCard';
@@ -11,7 +12,10 @@ const Home = () => {
     <div className="">
       <Navbar />
       <main className="mt-16 mb-16 md:mt-32 md:mb-32 flex flex-col gap-10">
-        <section className="home  flex justify-center items-center">
+        <section
+          id="home"
+          className="home scroll-mt-32 flex justify-center items-center"
+        >
           <div className="home-container grid  md:grid-cols-[max-content_1fr_max-content] items-center justify-center">
             <div className="home-socials flex flex-col items-center justify-center px-7 gap-3 md:order-1">
               <a href="">
@@ -65,10 +69,13 @@ const Home = () => {
             </div>
           </div>
         </section>
-        <section className="about flex flex-col items-center justify-center">
+        <section
+          id="about"
+          className="about md:scroll-mt-12 flex flex-col items-center justify-center"
+        >
           <SectionInfoCard name="About Me" info="Who am I ?" />
-          <div className="about-me-container max-w-[90%] md:w-[60%] lg:w-[40%] border bg-white rounded-2xl border-gray-300 drop-shadow-md ">
-            <p className="about-me-info px-6 md:px-10 py-8 text-lg md:text-xl text-gray-700 leading-relaxed text-center italic ">
+          <div className="about-me-container max-w-[90%] md:w-[60%] 3xl:w-[40%] 4xl:w-[35%] border bg-white rounded-2xl border-gray-300 drop-shadow-md ">
+            <p className="about-me-info px-6 md:px-10 py-8 text-lg md:text-lg 2xl:text-xl text-gray-700 leading-relaxed text-center italic ">
               I'm a Full-Stack Developer with a passion for building efficient,
               scalable, and user-friendly applications. My key interests lie in
               Full-Stack Software Development and Cybersecurity, and I'm always
@@ -77,15 +84,42 @@ const Home = () => {
             </p>
           </div>
         </section>
-        <section className="skills">
+        <section id="skills" className="skills md:scroll-mt-12">
           <SectionInfoCard name="Skills" info="My Skills" />
           <SkillsCard />
         </section>
-        <section className="projects">
+        <section
+          id="projects"
+          className="projects md:scroll-mt-12 flex flex-col justify-center items-center"
+        >
           <SectionInfoCard name="Projects" info="Recent projects" />
-          <div className="projects-container grid-cols-1 flex justify-center">
-            <ProjectCard imgPath="/project1_screen.PNG" name="Forno Felice" />
-
+          <div className="projects-container grid grid-cols-1 md:grid-cols-2 gap-4 justify-center items-center">
+            <ProjectCard
+              imgPath="/project1_screen.PNG"
+              name="Forno Felice"
+              href="https://tibiolo.github.io/Restaurant_Website/"
+            />
+            <ProjectCard
+              imgPath="/project2_screen.png"
+              name="Notes Webapp"
+              href="https://github.com/tibiolo/Notes-WebApp"
+            />
+          </div>
+        </section>
+        <section
+          id="contact"
+          className="contact md:scroll-mt-12 flex flex-col justify-center items-center"
+        >
+          <SectionInfoCard name="Contact" info="Get In Touch" />
+          <div className="contact-form-container grid grid-cols-1 md:grid-cols-2 ">
+            <div className="contact-info bg-white border border-gray-300 rounded-xl p-5 shadow-md">
+              <h3 className="email-title">Email</h3>
+              <p className="email">makso544g@gmail.com</p>
+              <div className="email-me-container flex items-center gap-1 cursor-pointer">
+                <FaLongArrowAltRight className="text-gray-600" />
+                <p>Email me</p>
+              </div>
+            </div>
           </div>
         </section>
       </main>
