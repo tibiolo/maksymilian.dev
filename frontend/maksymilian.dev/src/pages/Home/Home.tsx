@@ -2,6 +2,7 @@ import Navbar from '../../components/Navbar/Navbar';
 import { FaArrowRightLong } from 'react-icons/fa6';
 import { PiHandWaving } from 'react-icons/pi';
 import { MdMailOutline } from 'react-icons/md';
+import { MdOutlineEmail } from 'react-icons/md';
 import { FaLongArrowAltRight } from 'react-icons/fa';
 import SectionInfoCard from '../../components/SectionInfoCard/SectionInfoCard';
 import SkillsCard from '../../components/SkillsCard/SkillsCard';
@@ -14,7 +15,7 @@ const Home = () => {
       <main className="mt-16 mb-16 md:mt-32 md:mb-32 flex flex-col gap-10">
         <section
           id="home"
-          className="home scroll-mt-32 flex justify-center items-center"
+          className="home scroll-mt-60 mt-25 md:mt-15 mb-40 flex justify-center items-center"
         >
           <div className="home-container grid  md:grid-cols-[max-content_1fr_max-content] items-center justify-center">
             <div className="home-socials flex flex-col items-center justify-center px-7 gap-3 md:order-1">
@@ -71,7 +72,7 @@ const Home = () => {
         </section>
         <section
           id="about"
-          className="about md:scroll-mt-12 flex flex-col items-center justify-center"
+          className="about scroll-mt-50  mt-5 mb-40 flex flex-col items-center justify-center"
         >
           <SectionInfoCard name="About Me" info="Who am I ?" />
           <div className="about-me-container max-w-[90%] md:w-[60%] 3xl:w-[40%] 4xl:w-[35%] border bg-white rounded-2xl border-gray-300 drop-shadow-md ">
@@ -84,13 +85,13 @@ const Home = () => {
             </p>
           </div>
         </section>
-        <section id="skills" className="skills md:scroll-mt-12">
+        <section id="skills" className="skills scroll-mt-35 md:scroll-mt-20 mt-5 mb-40">
           <SectionInfoCard name="Skills" info="My Skills" />
           <SkillsCard />
         </section>
         <section
           id="projects"
-          className="projects md:scroll-mt-12 flex flex-col justify-center items-center"
+          className="projects scroll-mt-35 flex flex-col justify-center items-center mt-5 mb-40"
         >
           <SectionInfoCard name="Projects" info="Recent projects" />
           <div className="projects-container grid grid-cols-1 md:grid-cols-2 gap-4 justify-center items-center">
@@ -108,15 +109,16 @@ const Home = () => {
         </section>
         <section
           id="contact"
-          className="contact md:scroll-mt-12 flex flex-col justify-center items-center"
+          className="contact scroll-mt-40 flex flex-col justify-center items-center mt-5 mb-40"
         >
           <SectionInfoCard name="Contact" info="Get In Touch" />
           <div className="contact-form-container grid grid-cols-1 md:grid-cols-2 ">
-            <div className="contact-info bg-white border border-gray-300 rounded-xl p-5 shadow-md">
-              <h3 className="email-title">Email</h3>
+            <div className="contact-info bg-white border border-gray-300 rounded-xl p-5 shadow-md gap-2 flex flex-col justify-center items-center">
+              <MdOutlineEmail className="text-4xl" />
+
               <p className="email">makso544g@gmail.com</p>
-              <div className="email-me-container flex items-center gap-1 cursor-pointer">
-                <FaLongArrowAltRight className="text-gray-600" />
+              <div className="email-me-container flex items-center gap-1 cursor-pointer ">
+                <FaLongArrowAltRight className="text-gray-600 text-xl" />
                 <p>Email me</p>
               </div>
             </div>
