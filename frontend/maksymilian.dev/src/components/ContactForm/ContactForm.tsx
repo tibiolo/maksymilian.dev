@@ -1,3 +1,5 @@
+import { FiSend } from 'react-icons/fi';
+
 const ContactForm = () => {
   return (
     <div className="contact-form-container p-10 border border-gray-300 rounded-xl bg-white shadow-md w-[90vw] md:w-[400px]">
@@ -54,7 +56,10 @@ const ContactForm = () => {
           type="submit"
           className="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-6 rounded-md transition-all duration-200 ease-in-out cursor-pointer"
         >
-          Send Message
+          <div className="flex items-center justify-center gap-1.5 text-lg">
+            <FiSend />
+            <h3>Send Message</h3>
+          </div>
         </button>
       </form>
     </div>
