@@ -89,6 +89,11 @@ const Home = () => {
           <SectionInfoCard name="Projects" info="Recent projects" />
           <div className="projects-container grid grid-cols-1 md:grid-cols-2 gap-4 justify-center items-center">
             <ProjectCard
+              imgPath="/project3_screen.png"
+              name="Maksymilian.dev"
+              href="https://maksymilian.dev"
+            />
+            <ProjectCard
               imgPath="/project1_screen.PNG"
               name="Forno Felice"
               href="https://tibiolo.github.io/Restaurant_Website/"
