@@ -11,6 +11,10 @@ import SkillsCard from '../../components/SkillsCard/SkillsCard';
 import ProjectCard from '../../components/ProjectCard/ProjectCard';
 import ContactForm from '../../components/ContactForm/ContactForm';
 import Footer from '../../components/Footer/Footer';
+import profile_img from '../../assets/profile_img.jpg';
+import project1_screen from '../../assets/project1_screen.png';
+import project2_screen from '../../assets/project2_screen.png';
+import project3_screen from '../../assets/project3_screen.png';
 
 const Home = () => {
   return (
@@ -33,7 +37,7 @@ const Home = () => {
             <div className="home-img w-40 md:w-50 flex items-center justify-center md:order-3">
               <img
                 className="rounded-full border-5 border-gray-300  shadow-2xl"
-                src="/profile-img.jpg"
+                src={profile_img}
                 alt="Profile image"
               />
             </div>
@@ -89,17 +93,17 @@ const Home = () => {
           <SectionInfoCard name="Projects" info="Recent projects" />
           <div className="projects-container grid grid-cols-1 md:grid-cols-2 gap-4 justify-center items-center">
             <ProjectCard
-              imgPath="/project3_screen.png"
+              imgPath={project3_screen}
               name="Maksymilian.dev"
               href="https://maksymilian.dev"
             />
             <ProjectCard
-              imgPath="/project1_screen.PNG"
+              imgPath={project1_screen}
               name="Forno Felice"
               href="https://tibiolo.github.io/Restaurant_Website/"
             />
             <ProjectCard
-              imgPath="/project2_screen.png"
+              imgPath={project2_screen}
               name="Notes Webapp"
               href="https://github.com/tibiolo/Notes-WebApp"
             />
