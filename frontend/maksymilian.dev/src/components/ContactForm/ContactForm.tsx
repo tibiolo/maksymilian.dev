@@ -12,6 +12,7 @@ const ContactForm = () => {
             Name
           </label>
           <input
+            autoComplete="name"
             type="text"
             id="name"
             name="name"
@@ -28,6 +29,7 @@ const ContactForm = () => {
             Email
           </label>
           <input
+            autoComplete="email"
             type="email"
             id="email"
             name="email"
