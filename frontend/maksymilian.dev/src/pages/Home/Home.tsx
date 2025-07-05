@@ -12,7 +12,6 @@ import ProjectCard from '../../components/ProjectCard/ProjectCard';
 import ContactForm from '../../components/ContactForm/ContactForm';
 import Footer from '../../components/Footer/Footer';
 import profile_img from '../../assets/profile_img.jpg';
-import project1_screen from '../../assets/project1_screen.png';
 import project2_screen from '../../assets/project2_screen.png';
 import project3_screen from '../../assets/project3_screen.png';
 
@@ -96,11 +95,6 @@ const Home = () => {
               imgPath={project3_screen}
               name="Maksymilian.dev"
               href="https://maksymilian.dev"
-            />
-            <ProjectCard
-              imgPath={project1_screen}
-              name="Forno Felice"
-              href="https://tibiolo.github.io/Restaurant_Website/"
             />
             <ProjectCard
               imgPath={project2_screen}
