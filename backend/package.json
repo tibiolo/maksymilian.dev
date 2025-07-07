@@ -16,13 +16,16 @@
     "express-rate-limit": "^7.5.1",
     "helmet": "^8.1.0",
     "morgan": "^1.10.0",
-    "nodemailer": "^7.0.4"
+    "nodemailer": "^7.0.4",
+    "sanitize-html": "^2.17.0",
+    "zod": "^3.25.74"
   },
   "devDependencies": {
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.3",
     "@types/node": "^24.0.10",
     "@types/nodemailer": "^6.4.17",
+    "@types/sanitize-html": "^2.16.0",
     "@typescript-eslint/eslint-plugin": "^8.35.1",
     "@typescript-eslint/parser": "^8.35.1",
     "eslint": "^9.30.1",
