@@ -1,9 +1,9 @@
 import rateLimit from 'express-rate-limit';
 
-const limiter = rateLimit({
+const contactRateLimiter = rateLimit({
   windowMs: 60 * 1000,
   max: 5,
   message: 'Too many requests, please try again later.',
 });
 
-export default limiter;
+export default contactRateLimiter;

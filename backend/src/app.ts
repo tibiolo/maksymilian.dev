@@ -1,6 +1,7 @@
 import express from 'express';
 import helmet from 'helmet';
 import cors from 'cors';
+import contactRoutes from '../src/routes/contactRoutes.js';
 
 // Initializing app
 const app = express();
@@ -11,6 +12,6 @@ app.use(cors({ origin: 'http://localhost:5173' }));
 app.use(express.json());
 
 // Contact Route
-app.use('/api');
+app.use('/api', contactRoutes);
 
 export default app;
