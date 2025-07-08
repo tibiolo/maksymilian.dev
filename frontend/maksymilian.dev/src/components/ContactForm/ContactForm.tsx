@@ -1,9 +1,39 @@
 import { FiSend } from 'react-icons/fi';
+import { useState } from 'react';
+import sendContactForm from '../../services/sendContactForm';
 
 const ContactForm = () => {
+  const [form, setForm] = useState({ name: '', email: '', message: '' });
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState<string | null>(null);
+  const [error, setError] = useState<string | null>(null);
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+    setError(null);
+
+    try {
+      const response = await sendContactForm(form);
+      setSuccess(response.message);
+      setForm({ name: '', email: '', message: '' });
+    } catch (err: any) {
+      setError(err.message || 'Failed to send');
+      setSuccess(null);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <div className="contact-form-container p-10 border border-gray-300 rounded-xl bg-white shadow-md w-[90vw] md:w-[400px]">
-      <form action="POST" method="post" className="flex flex-col gap-4">
+      <form onSubmit={handleSubmit} className="flex flex-col gap-4">
         <div>
           <label
             htmlFor="name"
@@ -13,6 +43,8 @@ const ContactForm = () => {
           </label>
           <input
             autoComplete="name"
+            value={form.name}
+            onChange={handleChange}
             type="text"
             id="name"
             name="name"
@@ -30,6 +62,8 @@ const ContactForm = () => {
           </label>
           <input
             autoComplete="email"
+            value={form.email}
+            onChange={handleChange}
             type="email"
             id="email"
             name="email"
@@ -46,6 +80,8 @@ const ContactForm = () => {
             Message
           </label>
           <textarea
+            value={form.message}
+            onChange={handleChange}
             id="message"
             name="message"
             rows={5}
@@ -56,13 +92,16 @@ const ContactForm = () => {
 
         <button
           type="submit"
+          disabled={loading}
           className="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-6 rounded-md transition-all duration-200 ease-in-out cursor-pointer"
         >
           <div className="flex items-center justify-center gap-1.5 text-lg">
             <FiSend />
-            <h3>Send Message</h3>
+            <h3>{loading ? 'Sending...' : 'Send'}</h3>
           </div>
         </button>
+        {success && <p className="text-green-600">{success}</p>}
+        {error && <p className="text-red-600">{error}</p>}
       </form>
     </div>
   );
