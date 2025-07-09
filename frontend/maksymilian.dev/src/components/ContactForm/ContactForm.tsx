@@ -24,7 +24,7 @@ const ContactForm = () => {
       setSuccess(response.message);
       setForm({ name: '', email: '', message: '' });
     } catch (err: any) {
-      setError(err.message || 'Failed to send');
+      setError(err.response.data.errors[0].message || 'Failed to send');
       setSuccess(null);
     } finally {
       setLoading(false);
