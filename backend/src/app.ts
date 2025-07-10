@@ -8,8 +8,14 @@ const app = express();
 
 // Initializing Middlewares
 app.use(helmet());
-app.use(cors({ origin: 'http://localhost:4173' }));
+app.use(
+  cors({
+    origin: false,
+    methods: ['GET', 'POST'],
+  })
+);
 app.use(express.json());
+app.set('trust proxy', 1);
 
 // Contact Route
 app.use('/api', contactRoutes);
