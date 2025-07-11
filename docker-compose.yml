@@ -1,18 +1,4 @@
 services:
-  frontend:
-    build:
-      context: ./frontend/maksymilian.dev
-      dockerfile: Dockerfile
-      args:
-        VITE_API_URL: ${VITE_API_URL}
-    container_name: frontend
-    ports:
-      - '80:80'
-    depends_on:
-      - backend
-    env_file:
-      - ./frontend/maksymilian.dev/.env
-
   backend:
     build:
       context: ./backend
