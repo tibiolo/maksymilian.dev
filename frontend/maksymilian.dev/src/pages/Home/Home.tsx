@@ -114,7 +114,7 @@ const Home = () => {
               <div className="contact-info-container bg-white border border-gray-300 rounded-xl p-5 shadow-md gap-2 flex flex-col justify-center items-center">
                 <MdOutlineEmail className="text-4xl" />
 
-                <p className="email">makso544g@gmail.com</p>
+                <p className="email">contact@maksymilian.dev</p>
                 <div className="email-me-container flex items-center gap-1 cursor-pointer ">
                   <FaLongArrowAltRight className="text-gray-600 text-xl" />
                   <p>Email me</p>
